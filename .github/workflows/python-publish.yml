@@ -4,17 +4,16 @@
 name: Upload Python Package
 
 on:
-  release:
+  release: 1.0 Beta
     types: [created]
 
 jobs:
   deploy:
 
-    runs-on: ubuntu-latest
-
+    runs-on: Ubuntu-latest,macos-latest,windows-latest with python-latest
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python
+    - name: Set up DSDKOSSCREENREC
       uses: actions/setup-python@v2
       with:
         python-version: '3.x'
